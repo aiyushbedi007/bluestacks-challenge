@@ -1,0 +1,108 @@
+@import '../../assets/styles/styles';
+
+.heading {
+  color: $heading-blue;
+  font-family: $Roboto;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.imageWrapper {
+  @include breakpoint(mobile) {
+    text-align: left;
+  }
+}
+
+.image {
+  height: 137px;
+  width: 137px;
+
+  @include breakpoint(mobile) {
+    height: 100px;
+    width: 100px;
+  }
+  @include breakpoint(tablet) {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+.modalContainer {
+  .titleDesc {
+    display: grid;
+    padding-left: 10px;
+    position: relative;
+    height: 137px;
+
+    @include breakpoint(mobile) {
+      height: 101px;
+      padding-left: 0;
+    }
+    @include breakpoint(tablet) {
+      height: 110px;
+    }
+  }
+
+  .bsTitle {
+    color: $heading-blue;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .bsReg {
+    color: $desc-gray;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .pricingWrapper {
+    padding-top: 10px;
+
+    .pricingHeading {
+      color: $heading-blue;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 56px;
+      margin: 0;
+    }
+
+    .priceTitle {
+      color: $light-grey;
+      font-size: 16px;
+      line-height: 38px;
+      font-weight: normal;
+    }
+
+    .priceValue {
+      color: $title;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: right;
+      line-height: 38px;
+    }
+  }
+
+  .closeButton {
+    height: 48px;
+    width: 84px;
+    color: $button-black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    border: 2px solid $button-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 46px auto 0 auto;
+
+    &:hover {
+      color: $button-black;
+      border-radius: 0;
+      border: 2px solid $button-black;
+    }
+  }
+}
